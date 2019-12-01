@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+
+<body>
+	<script>
+		const redFruits = ['apple', 'strawberry', 'cherry', 'cranberries'];
+		const greenFruits = ['kiwi', 'lime', 'avocado'];
+
+		let message;
+		let isFind = false;
+		let addFruit;
+		let addColor = false;
+
+		// function stop() {}
+
+		// function logFruitAdded(_color) {
+		// 	alert(`Фрукт добавлен в массив ${_color}`);
+		// }
+
+
+		// function addFruit(_selectedFruit) {
+		// 	const isRed = confirm('Is fruit red?');
+		// 	if (isRed) {
+		// 		redFruits.push(_selectedFruit);
+		// 		logFruitAdded('RED');
+		// 	} else {
+		// 		const isGreen = confirm('Is fruit green?');
+		// 		if (isGreen) {|
+		// 			greenFruits.push(_selectedFruit);
+		// 			logFruitAdded('GREEN')
+		// 		} else {
+		// 			alert('Vredina! not choose color of fruit');
+		// 		}
+		// 	}
+		// }
+
+
+		//console.log(message);
+		do {
+			isFind = false;
+			message = prompt("Введите фрукт").toLowerCase();
+			for (const fruit of redFruits) {
+				//console.log(fruit);
+				if (message === fruit) {
+					alert('Фрукт красный');
+					isFind = true;
+				} 
+			}
+			
+			for (const fruit of greenFruits) {
+				//console.log(fruit);
+				if (message === fruit) {
+					alert('Фрукт зеленый');
+					isFind = true;
+				} 
+			}
+			
+			if (isFind === false) {
+				addFruit = confirm('Фрукт не найден, вы хотите добавить его');
+				if (addFruit) {
+					addColor = confirm('Этот фрукт красный?');
+					if (addColor) {
+						redFruits.push(message);
+						console.log(redFruits);
+						alert('Фрукт добавлен в массив красных');
+					}
+					if (!addColor) {
+						addColor = confirm('Этот фрукт зеленый?');
+						greenFruits.push(message);
+						console.log(greenFruits);
+						alert('Фрукт добавлен в массив зеленых')
+					}
+				} 
+				if (!addFruit) {
+					alert ('Это не фрукт');
+				}
+			}
+
+			// if (message === 'stop') {
+			// 	alert('Остановлено пользователем');			
+			// }
+		} while (true);
+	
+		// alert('Фрукт не найден, вы хотите добавить его')
+		// 	cansel repeat prompt
+		// 	yes 
+		// 	confirm (это фрукт красный) yes добавить в красный массив, выводим красный массив (перед пишем красный масив обновлен)
+		// 	no
+		// 	confirm (это фрукт зеленый) ====
+		// 	no
+		// 	alert('Это не фрукт')
+	</script>
+</body>
+
+</html>

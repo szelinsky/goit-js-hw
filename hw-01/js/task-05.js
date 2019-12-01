@@ -1,41 +1,45 @@
-let country = prompt('Введите страну').toLowerCase();
-let cost;
+"use strict"
 
-//земеняет первую букву в словах на прописную
-function upperFirstLetter(str) {
-	return str.charAt(0).toUpperCase() + str.slice(1);
-}
+function task5() {
+	let country = prompt('Введите страну').toLowerCase();
+	let cost;
 
-switch (country) {
-	case 'китай':
-		cost = 100;
-		break;
+	//земеняет первую букву в словах на прописную
+	function upperFirstLetter(str) {
+		return str.charAt(0).toUpperCase() + str.slice(1);
+	}
 
-	case 'чили':
-		cost = 250;
-		break;
+	switch (country) {
+		case 'китай':
+			cost = 100;
+			break;
 
-	case 'австралия':
-		cost = 170;
-		country = 'австралию';
-		break;
+		case 'чили':
+			cost = 250;
+			break;
 
-	case 'индия':
-		cost = 80;
-		country = 'индию';
-		break;
+		case 'австралия':
+			cost = 170;
+			country = 'австралию';
+			break;
 
-	case 'ямайка':
-		cost = 120;
-		country = 'ямайку';
-		break;
+		case 'индия':
+			cost = 80;
+			country = 'индию';
+			break;
 
-	default:
-		alert('В вашей стране доставка не доступна');
-}
+		case 'ямайка':
+			cost = 120;
+			country = 'ямайку';
+			break;
 
-country = upperFirstLetter(country);
+		default:
+			alert('В вашей стране доставка не доступна');
+	}
 
-if (cost) {
-	alert(`Доставка в ${country} будет стоить ${cost} кредитов`);
+	country = upperFirstLetter(country);
+
+	if (cost) {
+		alert(`Доставка в ${country} будет стоить ${cost} кредитов`);
+	}
 }
