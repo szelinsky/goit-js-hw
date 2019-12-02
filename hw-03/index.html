@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+
+<body>
+	<script src="js/task-01.js"></script>
+	<script src="js/task-02.js"></script>
+	<script src="js/task-03.js"></script>
+	<script src="js/task-04.js"></script>
+	<script src="js/task-06.js"></script>
+	<script src="js/task-05.js"></script>
+
+	<script type="text/javascript">
+		let message = prompt('Введите номер задания от 1 до 6');
+
+		if (!message) {
+			alert('Отменено пользователем');
+		} else {
+			switch (message) {
+				case '1':
+					task01();
+					break;
+
+				case '2':
+					task02();
+					break;
+
+				case '3':
+					task03();
+					break;
+
+				case '4':
+					task04();
+					break;
+
+				case '5':
+					task05();
+					break;
+
+				case '6':
+					task06();
+					break;
+
+				default:
+					alert('Ошибка! Введите число от 1 до 6');
+			}
+		}
+	</script>
+
+</body>
+
+</html>
