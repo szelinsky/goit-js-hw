@@ -1,13 +1,24 @@
 const task05 = () => {
 	
+	// const getAllPropValues = (arr, prop) => {	
+	// 	//console.log(arr[prop]);	
+	// 	let newArr = [];
+	// 	for (let i = 0; i < arr.length; i++) {	
+	// 		let currentObject = arr[i];	
+	// 		if (currentObject[prop]) {
+	// 			newArr.push(currentObject[prop]);
+	// 		}
+	// 	}
+	// 	return newArr;
+	// }
+
+	//ВТОРОЙ СПОСОБ ЧЕРЕЗ ОБЪЕКТЫ
 	const getAllPropValues = (arr, prop) => {	
 		//console.log(arr[prop]);	
 		let newArr = [];
-		for (let i = 0; i < arr.length; i++) {		
-			if (arr[i][prop] === undefined) {
-				return newArr = [];
-			}	else {
-				newArr.push(arr[i][prop]);
+		for (let item of arr) {		
+			if (item[prop] !== undefined) {
+				newArr.push(item[prop]);
 			}
 		}
 		return newArr;
@@ -26,3 +37,7 @@ const task05 = () => {
 	
 	console.log(getAllPropValues(products, 'category')); // []
 }
+
+
+//
+
