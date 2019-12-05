@@ -89,6 +89,7 @@ const task07 = () => {
 					console.log(account.transactions[key])
 				}
 			}
+			//return this.transactions[id];
 		},
 	
 		/*
@@ -124,5 +125,7 @@ const task07 = () => {
 	//account.getTransactionDetails(3);
 
 	//account.getTransactionTotal('withdraw');
+
+	account.getTransactionDetails(2); 
 	
 }
