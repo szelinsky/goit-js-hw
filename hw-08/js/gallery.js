@@ -35,6 +35,9 @@ const onImageClick = e => {
 	modal.classList.add('is-open');
 	bigImage.src = e.target.dataset.source;
 	findBigImageIdx(galleryItems);	
+	document.addEventListener('keydown', onEcsKey);
+	document.addEventListener('keydown', onLeftKey);
+	document.addEventListener('keydown', onRightKey);
 }
 
 const onCloseAndOverlayClick = e => {
@@ -46,7 +49,9 @@ const onCloseAndOverlayClick = e => {
 }
 
 const onEcsKey = () => {
+	
 	if (event.code == 'Escape') {
+		console.log('esc')
 		modal.classList.remove('is-open');
 		bigImage.src = "";
   }
@@ -84,9 +89,8 @@ const onLeftKey = () => {
 createGallery(galleryItems);
 gallery.addEventListener("click", onImageClick);
 overlay.addEventListener("click", onCloseAndOverlayClick);
-document.addEventListener('keydown', onEcsKey);
-document.addEventListener('keydown', onLeftKey);
-document.addEventListener('keydown', onRightKey);
+
+
 
 
 
