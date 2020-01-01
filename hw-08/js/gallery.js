@@ -90,9 +90,3 @@ createGallery(galleryItems);
 gallery.addEventListener("click", onImageClick);
 overlay.addEventListener("click", onCloseAndOverlayClick);
 
-
-
-
-
-
-

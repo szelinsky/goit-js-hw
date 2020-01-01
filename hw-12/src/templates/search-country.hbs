@@ -1,0 +1,16 @@
+<h1>{{name}}</h1>
+<div class="flex">
+	<div>
+		<div><b>Capital:</b> {{capital}}</div>
+		<div><b>Population:</b> {{population}}</div>
+		<div><b>Languages:</b>
+			<ul>
+				{{#each languages}}
+				<li>{{this.name}}</li>
+				{{/each}}
+			</ul>
+		</div>
+	</div>
+
+	<div><img src="{{flag}}" alt="" class="flag"></div>
+</div>
