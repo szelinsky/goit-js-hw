@@ -27,7 +27,7 @@ const delay = debounce(function() {
     if (result.length === 1) {
 			clearOutput();
 			result[0].population = result[0].population.toLocaleString();
-			console.log(result[0].languages)
+			//console.log(result[0].languages)
 			elements.countryPage.insertAdjacentHTML("beforeend", buildPage(result));
 		} else if (result.length >= 10)  {
 			PNotify.error({
